@@ -1,7 +1,7 @@
 from modules import *
 from utility import *
 from sklearn.ensemble.forest import RandomForestRegressor
-__UPLOADS__ = "/home/piyush/pScan-Web/uploads/"
+__UPLOADS__ = "/home/piyush/code2create/uploads/"
 
 class ParkinsonsDiseaseHandler(RequestHandler):
     """
@@ -46,4 +46,5 @@ class ParkinsonsDiseaseHandler(RequestHandler):
         if updrs[0] < 5:
             updrs[0] = 1
 
-        self.write({"status" : "Successfull", "code" : 200, "isParkinson" : isParkinson, "UPDRS" : updrs[0], "features" : attr})
+        self.render("output.html", ipk = isParkinson, updrs = UPDRS)
+        #self.write({"status" : "Successfull", "code" : 200, "isParkinson" : isParkinson, "UPDRS" : updrs[0], "features" : attr})

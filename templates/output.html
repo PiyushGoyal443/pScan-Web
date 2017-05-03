@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>circle with text</title>
+  <style>
+  body {
+    background-color: #5f5f5f;
+  }
+  #circle {
+    position: relative;
+    background-color: #e66;
+    margin: 20px auto;
+    width: 400px;
+    height: 400px;
+    border-radius: 200px;
+  }
+  #text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 50px;
+  }
+  </style>
+
+</head>
+
+<body>
+  <div id="circle">
+    {% if ipk > 0 %}
+      <div id="text">You Have Parkinson<br> UPDRS: {{updrs}}</div>
+    {% else %}
+      <div id="text">You Don't Have Parkinson<br> UPDRS: {{updrs}}</div>
+    {% end %}
+  </div>
+</body>
+
+</html>
