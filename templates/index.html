@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+      .icon{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        padding-top: 30vh;
+      }
+
+      .sub{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        padding-top: 5vh;
+      }
+
+      .icon > img { /*image size*/
+        width: 10%;
+        height: 10%;
+      }
+
+      body{
+        background-color: #5f5f5f; /*change background color*/
+      }
+
+      .btn-primary{
+        background-color: #e66; /*if want to change button color*/
+      }
+
+      .sub_but{
+        margin-left: 110px;
+        margin-top: 25px;
+      }
+      </style>
+
+   </head>
+   <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 icon">
+          <img src="logo50.png" />
+        </div>
+        <div class="col-lg-12 col-md-12 sub">
+          <form enctype="multipart/form-data" action="/check" method="post">
+            <input class="btn btn-primary" type="file" name="audio" accept="audio/*">
+            <input class="btn btn-primary sub_but" type="submit">
+          </form>
+        </div>
+      </div>
+    </div>
+    </script>
+   </body>
+</html>
