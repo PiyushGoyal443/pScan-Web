@@ -37,9 +37,16 @@ def rendertxt(fname):
         f.readline()
         for i in range(24, 27):
             tmp = f.readline()
+	    print tmp
             tmp = tmp.strip(" ").split(":")
-            data[i] = float(tmp[1].split("%")[0])
-            dbData[tmp[0]] = float(tmp[1].split("%")[0])
+	    print tmp
+	    print tmp[1]
+	    try:
+                data[i] = float(tmp[1].split("%")[0])
+		dbData[tmp[0]] = float(tmp[1].split("%")[0])
+	    except ValueError:
+		data[i] = float(tmp[1].strip(" ").split(" ")[0])
+                dbData[tmp[0]] = float(tmp[1].strip(" ").split(" ")[0])
 
         # for Jitter features
         f.readline()
