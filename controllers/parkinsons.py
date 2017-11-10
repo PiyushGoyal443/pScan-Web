@@ -1,7 +1,7 @@
 from modules import *
 from utility import *
 from sklearn.ensemble.forest import RandomForestRegressor
-__UPLOADS__ = "/home/piyush/code2create/uploads/"
+__UPLOADS__ = "../uploads/"
 
 class ParkinsonsDiseaseHandler(RequestHandler):
     """
